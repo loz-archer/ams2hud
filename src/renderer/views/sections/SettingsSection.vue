@@ -185,22 +185,14 @@
         </div>
         <div class="s-settings__footer">
             <div class="s-settings__footer-row">
-                <div class="s-settings__footer-item s-settings__footer-item--cuppa">
+                <div class="s-settings__footer-item s-settings__footer-item--coffee">
                     <div class="s-settings__footer-content">
-                        <p class="s-settings__footer-text">If you enjoy using this HUD and want to help me out, consider <a href="https://buymeacoffee.com/weareindi" target="_blank" @click="goToHref">buying me a cuppa</a>.</p>
                         <span class="s-settings__footer-logo">
-                            <a href="https://buymeacoffee.com/weareindi" target="_blank" @click="goToHref"><SvgComponent svg="button--bmac" /></a>
+                            <a href="https://lozarcher.com" target="_blank" @click="goToHref"><SvgComponent svg="logo--lozarcher-icon" /></a>
                         </span>
-                    </div>
-                </div>
-            </div>
-            <div class="s-settings__footer-row">
-                <div class="s-settings__footer-item s-settings__footer-item--indi">
-                    <div class="s-settings__footer-content">
-                        <p class="s-settings__footer-text">Looking for a reliable digital designer, web developer or app engineer?<br>Keep me in mind.<br>
-                            You can find me at <a href="https://weareindi.co.uk" target="_blank" @click="goToHref">We Are Indi</a></p>
+                        <p class="s-settings__footer-text">If you enjoy using this HUD and want to help me out, consider <a href="https://coff.ee/lozarcher" target="_blank" @click="goToHref">buying me a coffee</a>.<br><em>See more projects at <a href="https://lozarcher.com" target="_blank" @click="goToHref">lozarcher.com</a></em></p>
                         <span class="s-settings__footer-logo">
-                            <a href="https://weareindi.co.uk" target="_blank" @click="goToHref"><SvgComponent svg="logo--indi" /></a>
+                            <a href="https://coff.ee/lozarcher" target="_blank" @click="goToHref"><SvgComponent svg="button--bmac" /></a>
                         </span>
                     </div>
                 </div>
@@ -265,7 +257,7 @@
         border-radius: 4px;
 
         .s-settings__heading {
-            // font-size: em(16);
+            // font-size: em(16);font-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-sizefont-size
         }
     }
 }
@@ -353,17 +345,32 @@
 }
 
 .s-settings__footer-text {
-    padding: em(16, 13);
-    font-size: em(13);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    padding: em(6, 11) em(12, 11);
+    font-size: em(11);
+    font-weight: 400;
     line-height: 1.5em;
+    border-radius: em(4, 11);
+
+    em {
+        font-weight: 300;
+        font-style: italic;
+    }
 }
 
 .s-settings__footer-logo {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+
     padding: em(16);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: em(200);
+    width: em(128);
 
     a {
         width: 100%;
@@ -378,19 +385,9 @@
 
 }
 
-.s-settings__footer-item--cuppa {
-    @include color('color', 'black');
-    @include color('background-color', 'yellow');
-}
-
-.s-settings__footer-item--indi {
-    @include color('background-color', 'black');
-
-    .s-settings__footer-logo {
-        a {
-            width: em(80);
-        }
-    }
+.s-settings__footer-item--coffee {
+    @include color('color', 'white');
+    @include linearGradient('lozarcher-primary', 1, 'lozarcher-secondary', 1);
 }
 
 </style>

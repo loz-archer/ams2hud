@@ -1,16 +1,15 @@
 @use "sass:map";
 
-@mixin linearGradient($start: "black", $startOpacity: 1, $startPosition: 0%, $end: "black", $endOpacity: 1, $endPosition: 100%) {
+@mixin linearGradient($start: "black", $startOpacity: 1, $end: "black", $endOpacity: 1) {
     @if $start != "" and $end != "" {
         $startColor: map.get($colors, $start);
         $startCss: --color-#{$start};
         $endColor: map.get($colors, $end);
         $endCss: --color-#{$end};
         // #{$type}: rgba-format($color, $opacity);
-        // #{$type}: rgba(var($css), $opacity);
+        // #{$type}: rgba(var($css), $opacity);$opacity
 
-        background-image: linear-gradient(to right, rgba-format($startColor, $startOpacity) $startPosition, rgba-format($endColor, $endOpacity) $endPosition);
-        background-image: linear-gradient(to right, rgba(var($startCss), $startOpacity) $startPosition, rgba(var($endCss), $endOpacity) $endPosition);
+        background-image: linear-gradient(to right, rgba-format($startColor, $startOpacity), rgba-format($endColor, $endOpacity));
+        background-image: linear-gradient(to right, rgba(var($startCss), $startOpacity), rgba(var($endCss), $endOpacity));
     }
 }
-// background: linear-gradient(to right, rgba(red, 0) 96%, rgba(red, 1) 100%);
