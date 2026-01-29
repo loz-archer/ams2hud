@@ -1,3 +1,9 @@
+This project is dead. I stopped playing AMS2 regularly 2 years ago and lost interest in this project.
+
+I do have plans for a multi-sim "missing link" tool, which provides information to us racers the current leading sims don't provide natively. That will be the spiritual successor to AMS2HUD.
+
+---
+
 # AMS2HUD
 A custom HUD for AMS2.   
 
